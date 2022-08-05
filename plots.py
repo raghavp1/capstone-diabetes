@@ -101,7 +101,7 @@ def app(diabetes_df):
 
         if st.checkbox("Plot Decision Tree"):   
             # Create empty dot file.
-            #dot_data = StringIO()
+            dot_data = StringIO()
             # Export decision tree in dot format.
             dot_data = tree.export_graphviz(decision_tree = best_tree, max_depth = 3, out_file = None, filled = True, rounded = True,
                 feature_names = feature_columns, class_names = ['0', '1'])
